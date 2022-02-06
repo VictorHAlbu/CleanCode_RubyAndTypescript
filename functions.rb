@@ -27,7 +27,7 @@ def email_clients(clients)
   
 end
 
-# GOOD
+# GOOD CLEAN
 def email_active_clients(clients)
 
   clients
@@ -36,7 +36,26 @@ def email_active_clients(clients)
   
 end
 
-def active_client?
+def active_client?(client)
     client_record = database.lookup(client)
     client_record.active?
 end
+
+# Nomes de funções devem dizer o que elas fazem
+# BAAD
+def add_to_date(date, month)
+  #...
+end
+
+date = DateTime.now
+
+add_to_date(date, 1)
+
+# GOOD CLEAN
+
+def add_month_to_date(date, month)
+  
+end
+
+date = DateTime.now
+add_month_to_date(date, 1)
