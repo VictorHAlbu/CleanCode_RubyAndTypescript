@@ -20,3 +20,4 @@ end
 def discount
   price * (discount_percentage/100.0)
 end
+
