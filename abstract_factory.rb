@@ -1,4 +1,4 @@
-require 'byebug'
+require 'debug'
 class Chair
     # qtd pernas  
   def leg_count = raise('Not implement')
@@ -25,7 +25,7 @@ class ModernChair < Chair
 end
 
 class ModernTable < Table
-  def material = "glass"
+  def material = "vidro"
 end
 
 # Abstract Factory
@@ -50,10 +50,10 @@ end
 def client_code(factory)
   chair = factory.create_chair
   table = factory.create_table
-  puts "A cadeira tem #{chair.leg_count} pernas e #{chair.cushion? ? '' : 'no '} almofada."
+  puts "A cadeira tem #{chair.leg_count} pernas e #{chair.cushion? ? '' : 'não'} almofada."
   puts "A mesa é feita de #{table.material}."
 end
-debugger
+binding.break
 # In action!
 modern_factory = ModernFurnitureFactory.new
 vintage_factory = VintageFurnitureFactory.new

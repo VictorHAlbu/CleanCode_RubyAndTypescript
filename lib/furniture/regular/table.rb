@@ -1,9 +1,9 @@
 require "furniture/products/table"
 
 module Furniture
-  module Modern
+  module Regular
     class Table < Furniture::Products::Table
-      def material = "vidro"
+      def material = "plastic"
     end
   end
 end

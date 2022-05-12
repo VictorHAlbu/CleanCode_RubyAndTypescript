@@ -12,9 +12,12 @@ class Endpoint
     table = factory.create_table
     
     puts <<~TEXT
-    A cadeira tem #{chair.leg_count} pernas e #{chair.cushion? ? '' : 'no '} almofada.
+    A cadeira tem #{chair.leg_count} pernas e #{chair.cushion? ? '' : 'não '} almofada.
     A mesa é feita de #{table.material}.
     TEXT
   end
   
 end
+
+params = { "category" => "modern" }
+Endpoint.category(params)

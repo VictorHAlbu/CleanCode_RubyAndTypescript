@@ -5,9 +5,9 @@ require "furniture/regular/factory"
 
 module Furniture
   class Factory
-    TYPES:{
+    TYPES = {
       vintage: Vintage::Factory,
-      modern: Mordern::Factory
+      modern: Modern::Factory
     }
 
     def self.for(type)
