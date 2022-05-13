@@ -7,7 +7,7 @@ module Furniture
   class Factory
     TYPES = {
       vintage: Vintage::Factory,
-      modern: Modern::Factory
+      modern: Mopdern::Factory
     }
 
     def self.for(type)
