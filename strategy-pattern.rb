@@ -74,3 +74,15 @@ puts "\n -- \n"
 
 parser_json = TextParser.new('My Text', JSONParser.new)
 parser_json.parse "{ text: My Text }"
+
+class ParserType
+  
+  def text_parser(type, text)
+    TYPE = {
+      "xml" => XMLParser.new(text),
+      "json" => JSONParser.new(text)
+    }
+    TYPE[type]
+  end
+
+end
