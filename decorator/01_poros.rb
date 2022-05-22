@@ -26,7 +26,7 @@ class Coat
   def initialize(person)
     @person = person
   end
-
+ 
   def feeling_at(outside_temp)
     if outside_temp >= 35
       "Crazy hot"
