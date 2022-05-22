@@ -7,9 +7,7 @@ class Pizza
 end
 
 module Onions
-
   def cost = super + 1.0
-  
 end
 
 module Cheese
@@ -20,5 +18,5 @@ pizza = Pizza.new
 pizza.extend(Onions)
 pizza.extend(Cheese)
 
-puts "Your pizza costs: #{pizza.cost}"
+puts "Your pizza costs==: #{pizza.cost}"
 puts "Class: #{pizza.class}"
