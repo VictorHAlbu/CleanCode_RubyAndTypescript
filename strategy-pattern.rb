@@ -78,11 +78,15 @@ parser_json.parse "{ text: My Text }"
 class ParserType
   
   def text_parser(type, text)
-    TYPE = {
+    TYPES = {
       "xml" => XMLParser.new(text),
       "json" => JSONParser.new(text)
     }
-    TYPE[type]
+    TYPES[type]
   end
 
 end
+
+parsetype = ParserType.new
+debugger
+parsetype.text_parser("xml", "Mytext")

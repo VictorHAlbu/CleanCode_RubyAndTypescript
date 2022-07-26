@@ -33,6 +33,7 @@ class Hugo < CustomSingleton
 end
 # O construtor não é chamado enquanto a instacia em cache existir
 puts CustomSingleton.instance("Victor").name
+debugger
 puts CustomSingleton.instance("Hugo").name
 # Cria uma nova classe herdando os metodos de classe 
 @hugo = Hugo.instance("Hugo").name
